@@ -1,5 +1,15 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
+import { SpeechState, useSpeechContext } from "@speechly/react-client";
+import { PushToTalkButton, PushToTalkButtonContainer } from '@speechly/react-ui';
+import {
+    BigTranscript,
+    BigTranscriptContainer,
+    ErrorPanel
+} from "@speechly/react-ui";
+import {
+    SpeechProvider
+} from "@speechly/react-client";
 import Main from './components/Main/Main';
 import Details from './components/Details/Details'
 import useStyles from './styles'
@@ -20,6 +30,15 @@ const App = () => {
                     <Details title='Expense' />
                 </Grid>
             </Grid>
+            {/* <SpeechProvider appId="b47aaa8c-8edb-4639-ac96-feaca267063d" language="en-US"> */}
+                <BigTranscriptContainer>
+                    <BigTranscript />
+                </BigTranscriptContainer>
+
+                <PushToTalkButtonContainer>
+                    <PushToTalkButton captureKey=" " />
+                </PushToTalkButtonContainer>
+            {/* </SpeechProvider> */}
         </div>
     )
 }
