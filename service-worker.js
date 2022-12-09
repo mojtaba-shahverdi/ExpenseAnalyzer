@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ExpenseAnalyze/precache-manifest.6d9159a8e2a9d39148ff9d4031798f97.js"
+  "/ExpenseAnalyzer/precache-manifest.985d3ae6f9a75cca3fd642380ab75059.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ExpenseAnalyze/index.html", {
+workbox.routing.registerNavigationRoute("/ExpenseAnalyzer/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
