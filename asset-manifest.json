@@ -1,14 +1,14 @@
 {
-  "main.css": "/ExpenseAnalyzer/static/css/main.dc9bcca8.chunk.css",
-  "main.js": "/ExpenseAnalyzer/static/js/main.97a6da0e.chunk.js",
-  "main.js.map": "/ExpenseAnalyzer/static/js/main.97a6da0e.chunk.js.map",
+  "main.css": "/ExpenseAnalyzer/static/css/main.6d2351a8.chunk.css",
+  "main.js": "/ExpenseAnalyzer/static/js/main.f2b94861.chunk.js",
+  "main.js.map": "/ExpenseAnalyzer/static/js/main.f2b94861.chunk.js.map",
   "static/js/1.4c7f927d.chunk.js": "/ExpenseAnalyzer/static/js/1.4c7f927d.chunk.js",
   "static/js/1.4c7f927d.chunk.js.map": "/ExpenseAnalyzer/static/js/1.4c7f927d.chunk.js.map",
   "runtime~main.js": "/ExpenseAnalyzer/static/js/runtime~main.3d1b28fd.js",
   "runtime~main.js.map": "/ExpenseAnalyzer/static/js/runtime~main.3d1b28fd.js.map",
-  "static/media/index.css": "/ExpenseAnalyzer/static/media/bg.675b118b.png",
-  "static/css/main.dc9bcca8.chunk.css.map": "/ExpenseAnalyzer/static/css/main.dc9bcca8.chunk.css.map",
+  "static/media/index.css": "/ExpenseAnalyzer/static/media/bg1.87903943.jpeg",
+  "static/css/main.6d2351a8.chunk.css.map": "/ExpenseAnalyzer/static/css/main.6d2351a8.chunk.css.map",
   "index.html": "/ExpenseAnalyzer/index.html",
-  "precache-manifest.985d3ae6f9a75cca3fd642380ab75059.js": "/ExpenseAnalyzer/precache-manifest.985d3ae6f9a75cca3fd642380ab75059.js",
+  "precache-manifest.35884e64e3a0bd9f1e07858aad241326.js": "/ExpenseAnalyzer/precache-manifest.35884e64e3a0bd9f1e07858aad241326.js",
   "service-worker.js": "/ExpenseAnalyzer/service-worker.js"
 }
