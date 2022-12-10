@@ -15,7 +15,16 @@ const Details = ({ title, subheader }) => {
             <CardHeader title={title} subheader={subheader} />
             <CardContent>
                 <Typography variant='h5'>${total}</Typography>
-                <Doughnut data={chartData} />
+                <Doughnut  data={chartData} 
+                options= {{ 
+                    legend: {
+                        labels: {
+                            fontColor: "#fff",
+                            fontSize: 14
+                        }
+                    }
+                }}
+                />
             </CardContent>
         </Card>
     )

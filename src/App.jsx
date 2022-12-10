@@ -12,20 +12,20 @@ const App = () => {
     return (
         <div>
             <Grid className={classes.grid} container spacing={0} alignItems='center' justifyContent='center' style={{ height: '100vh' }}>
-                <Grid item xs={12} sm={3} className={classes.main}>
+                <Grid item xs={11} sm={8} md={3} className={classes.main}>
                     <Main />
                 </Grid>
-                <Grid item xs={12} sm={4} className={classes.income}>
+                <Grid item xs={11} sm={8} md={4} className={classes.income}>
                     <Details title='Income' />
                 </Grid>
-                <Grid item xs={12} sm={4} className={classes.expense}>
+                <Grid item xs={11} sm={8} md={4} className={classes.expense}>
                     <Details title='Expense' />
+                    <div className='A864166464a6sd46a8fw6e5f1cw6ed4w6e'></div>
                 </Grid>
             </Grid>
             <BigTranscriptContainer>
                 <BigTranscript />
             </BigTranscriptContainer>
-
             <PushToTalkButtonContainer>
                 <PushToTalkButton captureKey=" " />
             </PushToTalkButtonContainer>

@@ -22,17 +22,21 @@ const Form = () => {
     const { addTransaction } = React.useContext(ExpenseAnalyzerContext)
     const { segment } = useSpeechContext()
     const [open, setOpen] = React.useState(false)
+    const [error, setError] = React.useState()
 
-    const createTransaction = () => {
-        if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return
-
-        const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() }
-
-        setOpen(true)
-        addTransaction(transaction)
-        setFormData(initialState)
+    const   createTransaction = () => {
+        if(formData.amount && formData.category && formData.type && formData.date){
+            if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return
+            const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() }
+            setOpen(true)
+            addTransaction(transaction)
+            setFormData(initialState)
+        }
+        if(formData.amount === "") setError(true)
+        if(formData.category === "") setError(true)
+        if(formData.date === "") setError(true)
     }
-
+    
     React.useEffect(() => {
         if (segment) {
             if (segment.intent.intent === 'add_expense') {
@@ -69,9 +73,13 @@ const Form = () => {
                 createTransaction()
             }
         }
-    }, [segment])
+    }, [segment, formData])
 
     const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories
+
+    const style = {
+        borderBottom: error && '3px solid red'
+    }
 
     return (
         <Grid container spacing={2}>
@@ -91,7 +99,7 @@ const Form = () => {
                 </FormControl>
             </Grid>
             <Grid item xs={6}>
-                <FormControl fullWidth>
+                <FormControl fullWidth style={style}>
                     <InputLabel>Category</InputLabel>
                     <Select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })}>
                         {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
@@ -99,10 +107,10 @@ const Form = () => {
                 </FormControl>
             </Grid>
             <Grid item xs={6}>
-                <TextField type='number' label='Amount' fullWidth value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
+                <TextField style={style} type='number' label='Amount' fullWidth value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
             </Grid>
             <Grid item xs={6}>
-                <TextField type='date' label='Date' fullWidth value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
+                <TextField  type='date' label='Date' fullWidth value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
             </Grid>
             <Button className={classes.button} variant='outlined' color='primary' fullWidth onClick={createTransaction}>Create</Button>
         </Grid>

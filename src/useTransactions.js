@@ -22,6 +22,8 @@ const useTransactions = (title) => {
         datasets: [{
             data: filteredCategories.map((c) => c.amount),
             backgroundColor: filteredCategories.map((c) => c.color),
+            borderColor: 'rgba(255, 255, 255, 0.9)',
+            borderWidth: 0.5,
         }],
         labels: filteredCategories.map((c) => c.type),
     };
