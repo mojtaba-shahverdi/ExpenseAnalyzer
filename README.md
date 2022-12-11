@@ -9,4 +9,4 @@ DEMO [ExpenseAnalyzer](https://mojtaba-shahverdi.github.io/ExpenseAnalyzer/).
 ### `React ChartJS`
 ### `Material UI`
 
-![Screenshot (26)](https://user-images.githubusercontent.com/91985158/206906746-25208da3-ec11-440a-a3de-2c680548bf46.png)
+![ExpenseAnalyzer](https://user-images.githubusercontent.com/91985158/206906746-25208da3-ec11-440a-a3de-2c680548bf46.png)
