@@ -14,7 +14,7 @@ const Main = () => {
 
   return (
     <Card className={classes.root}>
-        <CardHeader title='Expense Analyser'/>
+        <CardHeader title='Expense Analyzer'/>
         <CardContent>
             <Typography align='center' variant='h5'>Total Balance ${balance}</Typography>
             <Typography variant='subtitle1' style={{ lineHeight: '1.5em', marginTop: '20px' }}>
