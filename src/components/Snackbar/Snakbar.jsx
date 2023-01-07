@@ -1,6 +1,6 @@
 import React from 'react'
 import { Snackbar } from '@material-ui/core'
-import MuiAlert from '@material-ui/lab/alert'
+import { Alert } from '@material-ui/lab';
 
 import useStyles from './styles'
 
@@ -22,9 +22,9 @@ const CustomizedSnakbar = ({ open, setOpen }) => {
             autoHideDuration={3000}
             onClose={handleClose}
         >
-            <MuiAlert onClose={handleClose} severity= 'success' elevation={6} variant='filled'>
+            <Alert onClose={handleClose} severity= 'success' elevation={6} variant='filled'>
                 Transaction Successfully Created.
-            </MuiAlert>
+            </Alert>
         </Snackbar>
     </div>
   )
